@@ -1,7 +1,13 @@
+/* General App Styling */
 .App {
   text-align: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
 }
 
+/* Logo Animation (if used) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,6 +19,16 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header Styles (optional) */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +40,72 @@
   color: white;
 }
 
+/* Link Styling */
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading */
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Calculator Options */
+.calculator-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #999;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Calculator Display Container */
+.calculator-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Calculator Box */
+.calculator-container {
+  background-color: white;
+  min-width: 350px;
+  max-width: 400px;
+  height: 500px; /* fixed height to prevent layout shift */
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Message if no calculator is selected */
+.select-msg {
+  color: #555;
+  font-size: 18px;
+  text-align: center;
 }
