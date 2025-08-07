@@ -93,7 +93,8 @@ button:hover {
   background-color: white;
   min-width: 350px;
   max-width: 400px;
-  height: 500px; /* fixed height to prevent layout shift */
+  width: 100%;
+  min-height: 500px; /* optional: initial minimum height */
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -101,6 +102,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow-y: auto; /* allow scroll if content grows */
 }
 
 /* Message if no calculator is selected */
@@ -108,4 +110,21 @@ button:hover {
   color: #555;
   font-size: 18px;
   text-align: center;
+}
+
+.history-box {
+  background: #f0f0f0;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.history-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+.history-box li {
+  margin-bottom: 4px;
+  font-family: monospace;
 }
